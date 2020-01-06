@@ -9,10 +9,11 @@ const App: React.FC = () => {
       <header className="App-header">
         <Head title="Now with type support!" isActive={true}></Head>
         <Button
-          onClick={value => {
-            console.log(value);
+          onClick={e => {
+            e.preventDefault();
+            console.log(e);
           }}
-          text="From props"
+          text="Button Text"
         />
       </header>
     </div>
