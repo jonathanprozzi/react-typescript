@@ -13,8 +13,12 @@ const App: React.FC = () => {
             e.preventDefault();
             console.log(e);
           }}
-          text="Button Text"
-        />
+        >
+          {/* <div>
+            <h3>THIS IS BAD PRACTICE BUT THIS WORKS BC IT'S A CHILD</h3>
+          </div> */}
+          Robust Button Text
+        </Button>
       </header>
     </div>
   );
