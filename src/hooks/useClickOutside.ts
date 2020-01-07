@@ -1,7 +1,8 @@
 import { useEffect } from "react";
 
 const useClickOutside = (
-  ref: React.MutableRefObject<HTMLDivElement>,
+  // at the hook level, we can be more generic and use HTMLElement
+  ref: React.MutableRefObject<HTMLElement>,
   // the actual events aren't React MouseEvent/TouchEvents - they're DOM events
   handler: (event: MouseEvent | TouchEvent) => void
 ) => {

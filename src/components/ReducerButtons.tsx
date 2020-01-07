@@ -28,6 +28,7 @@ function reducer(state: State, action: Action) {
 
 const ReducerButtons = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
+  // this should be specific - the ref below is on a div, so we use HTMLDivElement
   const ref = useRef<HTMLDivElement>(null!);
   useClickOutside(ref, () => {
     console.log("clicked outside!");
