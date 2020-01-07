@@ -6,12 +6,11 @@ const Input = () => {
   // example explicitly setting type (can be string or null)
   // const [name, setName] = useState<string | null>("");
 
-  // ref is Read Only
-  const ref = useRef<HTMLInputElement>(null!);
+  const ref = useRef<HTMLInputElement>(null);
 
-  if (ref && ref.current) {
-    console.log("ref", ref.current.value);
-  }
+  // this uses optional chaining - checks if ref? and current? are null before looking for value (only shows value if ref and current exist)
+  console.log("ref", ref?.current?.value);
+
   return (
     <input ref={ref} value={name} onChange={e => setName(e.target.value)} />
   );
