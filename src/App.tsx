@@ -2,6 +2,7 @@ import React from "react";
 import Head from "./components/Head";
 import Button from "./components/Button";
 import Input from "./components/Input";
+import ReducerButtons from "./components/ReducerButtons";
 import "./App.css";
 
 const App: React.FC = () => {
@@ -21,6 +22,7 @@ const App: React.FC = () => {
           </div> */}
           Robust Button Text
         </Button>
+        <ReducerButtons />
       </header>
     </div>
   );
