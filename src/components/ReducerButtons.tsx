@@ -7,8 +7,12 @@ type State = {
 };
 
 type Action = {
-  type: string;
+  type: "one" | "two"; // this works for usecases where expected type is same
 };
+
+// type Action = { type: "one" } | { type: "two" }; //union on whole Action
+
+// type Action = { type: "one" } | { type: "two" } | { type: "three" }; // many types
 
 function reducer(state: State, action: Action) {
   switch (action.type) {
